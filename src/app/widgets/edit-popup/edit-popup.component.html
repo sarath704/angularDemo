@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>Edit Deparatment detail</h1>
+<div mat-dialog-content>
+  <div class="form-container">
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Dept Id" [(ngModel)]="data.deptId" readonly>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input matInput placeholder="Name" [(ngModel)]="data.name">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Budget" [(ngModel)]="data.budget">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Q1" [(ngModel)]="data.q1">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Q2" [(ngModel)]="data.q2">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Q3" [(ngModel)]="data.q3">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Q4" [(ngModel)]="data.q4">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Dept Code" [(ngModel)]="data.deptCode">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Location" [(ngModel)]="data.location">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Tenant Id" [(ngModel)]="data.tenantId">
+      </mat-form-field>
+    </div>
+     <button mdl-button mdl-button-type="raised" (click)="closeDialog()">
+        Cancel
+      </button>
+      <!-- Raised button with ripple -->
+      <button mdl-button mdl-button-type="raised" mdl-ripple (click)="updatDialog()">
+        Update
+      </button>
+  
+  </div>
+
+
+</div>

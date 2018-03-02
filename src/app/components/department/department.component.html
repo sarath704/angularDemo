@@ -1,0 +1,160 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [limit]="5" [columnMode]="'force'" [headerHeight]="50"
+        [footerHeight]="50" [rowHeight]="'auto'">
+
+        <ngx-datatable-column name="DeptId">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            DEPT ID
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['deptId']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Name">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Name
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['name']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Budget">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Budget
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['budget']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Q1">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Q1
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['q1']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Q2">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Q2
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['q2']}}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Q3">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Q3
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['q3']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Q4">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Q4
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['q4']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="DeptCodeQ4">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Dept Code
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['deptCode']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Location">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Location
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['location']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+
+        <ngx-datatable-column name="Location">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Tenant Id
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <!-- {{row.deptId}} -->
+            {{row['tenantId']}}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Location">
+          <ng-template let-column="column" ngx-datatable-header-template>
+            Actions
+          </ng-template>
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+              <mat-icon (click)="openEditDialog(row);">mode_edit</mat-icon>
+              <mat-icon (click)="deleteDepartemet(row.deptId)">delete</mat-icon>
+            <!-- <button mat-button  (click)="openEditDialog(row);">
+              Edit
+            </button>
+            <mat-icon>mod_edit</mat-icon>
+            <button mat-button  (click)="deleteDepartemet(row.deptId)">
+              Delete
+            </button> -->
+          </ng-template>
+        </ngx-datatable-column>
+
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<!-- <table>
+  <tr>
+    <th>Dept Id</th>
+    <th>Name</th>
+    <th>Budget</th>
+    <th>Q1</th>
+    <th>Q2</th>
+    <th>Q3</th>
+    <th>Q4</th>
+    <th>Dept Code</th>
+    <th>Location</th>
+    <th>Tenant ID </th>
+    <th>Actions </th>
+  </tr>
+  <tr *ngFor="let dept of departmentData">
+    <td>{{dept.deptId}}</td>
+    <td>{{dept.name}}</td>
+    <td>{{dept.budget}}</td>
+    <td>{{dept.q1}}</td>
+    <td>{{dept.q2}}</td>
+    <td>{{dept.q3}}</td>
+    <td>{{dept.q4}}</td>
+    <td>{{dept.deptCode}}</td>
+    <td>{{dept.location}}</td>
+    <td>{{dept.tenantId}}</td>
+
+    <td>
+      <button type="button" (click)="editDepartment(dept.deptId)">Edit</button>
+      <button type="button" (click)="deleteDepartment(dept.deptId)">Delete</button>
+    </td>
+  </tr>
+</table> -->
